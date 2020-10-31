@@ -1,6 +1,13 @@
+//FILE NAME: APP.JS
+//AUTHOR'S NAME: NURLYBEK SULTAMURATOV
+//STUDENT ID: 301103746
+//WEB NAME: MY FAVOURITE BOOKS
+
+
 /* custom JS goes here */
 
 /* pagination code from http://www.bootply.com/lxa0FF9yhw */
+//ALLOWS TO MOVE FROM ONE PAGE TO ANOTHER
 $.fn.pageMe = function(opts){
     var $this = this,
         defaults = {
@@ -66,6 +73,7 @@ $.fn.pageMe = function(opts){
         return false;
     });
 
+    //ALLOWS TO GO TO THE PREVIOUS PAGE
     function previous(){
         var goToPage = parseInt(pager.data("curr")) - 1;
         goTo(goToPage);
@@ -75,7 +83,7 @@ $.fn.pageMe = function(opts){
         goToPage = parseInt(pager.data("curr")) + 1;
         goTo(goToPage);
     }
-
+    //FUNCTION GOTO
     function goTo(page){
         var startAt = page * perPage,
             endOn = startAt + perPage;
